@@ -22,7 +22,9 @@ public class topDownMovement : MonoBehaviour {
 	void Update () {
         Vector3 targetVelocity = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
 
-        rb.velocity = targetVelocity * moveSpeed;
+        // rb.velocity = targetVelocity * moveSpeed;
+
+        rb.AddForce(targetVelocity * moveSpeed);
       
     }
 }
