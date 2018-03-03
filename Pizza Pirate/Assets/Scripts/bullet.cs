@@ -17,8 +17,10 @@ public class bullet : MonoBehaviour {
     }
 
     void OnCollisionEnter(Collision col) {
-        Destroy(col.gameObject);
-        destroySelf();
+        if (col.gameObject.GetComponent<enemy>()) {
+            col.gameObject.GetComponent<enemy>().health -= 2;
+        }
+       
 
     }
 
