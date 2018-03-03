@@ -20,11 +20,22 @@ public class topDownMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 targetVelocity = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+       Vector3 targetVelocity = new Vector3(0, 0, Input.GetAxisRaw("Vertical"));
 
         // rb.velocity = targetVelocity * moveSpeed;
 
-        rb.AddForce(targetVelocity * moveSpeed);
-      
+        //rb.AddForce(targetVelocity * moveSpeed);
+
+        Vector3 movement = transform.rotation * Vector3.forward;
+
+        rb.AddForce(movement);
+
+        if (Input.GetAxis("Horizontal") >0) {
+            transform.Rotate(Vector3.down);
+        }
+        if (Input.GetAxis("Horizontal") < 0) {
+            transform.Rotate(Vector3.up);
+        }
+
     }
 }
