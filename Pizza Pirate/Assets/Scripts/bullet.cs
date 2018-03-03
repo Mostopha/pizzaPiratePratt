@@ -13,5 +13,16 @@ public class bullet : MonoBehaviour {
 	void Update () {
         Physics.IgnoreCollision(this.GetComponent<Collider>(), GameObject.Find("Player").GetComponent<Collider>());
 
+        Invoke("destroySelf", 4);
+    }
+
+    void OnCollisionEnter(Collision col) {
+        Destroy(col.gameObject);
+        destroySelf();
+
+    }
+
+    void destroySelf() {
+
     }
 }
