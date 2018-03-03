@@ -20,6 +20,8 @@ public class shootBullet : MonoBehaviour {
             Vector3 shootyVector = transform.rotation * Vector3.right*1000;
 
             shooty.GetComponent<Rigidbody>().AddForce(shootyVector);
+
+            shooty.transform.parent = null;
         }
 	}
 }

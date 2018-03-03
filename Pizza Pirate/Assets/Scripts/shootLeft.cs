@@ -20,6 +20,8 @@ public class shootLeft : MonoBehaviour {
             Vector3 shootyVector = transform.rotation * Vector3.left * 1000;
 
             shooty.GetComponent<Rigidbody>().AddForce(shootyVector);
+
+            shooty.transform.parent = null;
         }
     }
 }
