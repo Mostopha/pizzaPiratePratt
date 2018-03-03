@@ -31,10 +31,10 @@ public class topDownMovement : MonoBehaviour {
         rb.AddForce(movement);
 
         if (Input.GetAxis("Horizontal") >0) {
-            transform.Rotate(Vector3.down);
+            transform.Rotate(Vector3.up);
         }
         if (Input.GetAxis("Horizontal") < 0) {
-            transform.Rotate(Vector3.up);
+            transform.Rotate(Vector3.down);
         }
 
     }
