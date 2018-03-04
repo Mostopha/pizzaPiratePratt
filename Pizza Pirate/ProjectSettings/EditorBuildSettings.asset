@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/introScene.unity
+    guid: a681d26f015d395418ddd32bf60d60ee
+  - enabled: 1
+    path: Assets/Scenes/PizzaPirateP.unity
+    guid: 596ed916001c14099af0315daffd9f1b
+  - enabled: 1
+    path: Assets/Scenes/finalScene.unity
+    guid: 5d08534ebeeb72a46a82a8a361421b9f

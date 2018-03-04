@@ -22,6 +22,9 @@ public class shootBullet : MonoBehaviour {
             shooty.GetComponent<Rigidbody>().AddForce(shootyVector);
 
             shooty.transform.parent = null;
+
+            AudioSource audio = this.transform.root.GetComponent<AudioSource>();
+            audio.Play();
         }
 	}
 }

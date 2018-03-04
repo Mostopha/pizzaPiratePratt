@@ -18,6 +18,9 @@ public class bullet : MonoBehaviour {
 
     void OnCollisionEnter(Collision col) {
         if (col.gameObject.GetComponent<enemy>()) {
+
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
             col.gameObject.GetComponent<enemy>().health -= 2;
         }
        
