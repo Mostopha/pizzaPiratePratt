@@ -19,7 +19,7 @@ public class moveTowardsPlayer : MonoBehaviour {
 
         //transform.position = Vector2.Lerp(transform.position, target.position, 0.5f);
 
-        transform.position = Vector3.MoveTowards(transform.position, target.position, 0.05f);
+        transform.position = Vector3.MoveTowards(transform.position, target.position, 0.02f);
 
     }
 }
